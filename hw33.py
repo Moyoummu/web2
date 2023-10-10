@@ -19,7 +19,7 @@ class webApp(tornado.web.Application):
     def __init__(self):
         handlers = [
             (r'/', htmlHandler),
-            (r'/#request', RequestCountHandler),
+            (r'/request_count', RequestCountHandler),
             (r'/(.*)', tornado.web.StaticFileHandler, {'path': os.path.abspath(__file__)})
 
         ]
